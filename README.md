@@ -17,8 +17,18 @@ Translate the file to French:
 ```bash
 export KEY=YOUR-DEEPL-KEY
 python -m venv .venv # Create a virtual env
+source .venv/bin/activate # Activate the virtual env
 (.venv) pip install -r requirements.txt # Install dependencies
 (.venv) python translate.py test.json fr -k $KEY
+```
+
+Prints
+```json
+{
+    "foo": {
+        "bar": "Bonjour à tous !"
+    }
+}
 ```
 
 The translation is printed to stdout. Use a redirection operator to print it to a file.
